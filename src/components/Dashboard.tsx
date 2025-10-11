@@ -4,8 +4,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "./LanguageToggle";
 import DailyCheckin from "./DailyCheckin";
 import BlossomMap from "./BlossomMap";
+import ResiliencePathway from "./ResiliencePathway";
 import StoriesHub from "./StoriesHub";
-import { Heart, Flower2, BookOpen, Compass } from "lucide-react";
+import { Heart, Flower2, BookOpen, Compass, TrendingUp } from "lucide-react";
 
 const Dashboard = () => {
   const { t } = useLanguage();
@@ -29,7 +30,7 @@ const Dashboard = () => {
       {/* Main content */}
       <main className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
-          <TabsList className="grid w-full grid-cols-4 h-auto p-1 bg-muted/50">
+          <TabsList className="grid w-full grid-cols-5 h-auto p-1 bg-muted/50">
             <TabsTrigger 
               value="checkin" 
               className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
@@ -43,6 +44,13 @@ const Dashboard = () => {
             >
               <Flower2 className="w-5 h-5" />
               <span className="text-xs">{t('yourJourney')}</span>
+            </TabsTrigger>
+            <TabsTrigger 
+              value="resilience"
+              className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
+            >
+              <TrendingUp className="w-5 h-5" />
+              <span className="text-xs">{t('resiliencePathway')}</span>
             </TabsTrigger>
             <TabsTrigger 
               value="stories"
@@ -66,6 +74,10 @@ const Dashboard = () => {
 
           <TabsContent value="journey" className="mt-8">
             <BlossomMap />
+          </TabsContent>
+
+          <TabsContent value="resilience" className="mt-8">
+            <ResiliencePathway />
           </TabsContent>
 
           <TabsContent value="stories" className="mt-8">
