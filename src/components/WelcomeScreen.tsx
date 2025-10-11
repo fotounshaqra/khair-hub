@@ -71,22 +71,6 @@ const WelcomeScreen = ({ onStart }: WelcomeScreenProps) => {
         >
           {t('startJourney')}
         </Button>
-
-        {/* Trust indicators */}
-        <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground pt-8">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>Offline-first</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: '0.5s' }} />
-            <span>Private & Safe</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '1s' }} />
-            <span>Culturally Rooted</span>
-          </div>
-        </div>
       </div>
     </div>
   );
