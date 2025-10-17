@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    welcome: "Hi. I'm Amal.",
+    welcome: "Hi. I'm Safina.",
     welcomeSub: "No name needed. Just tell me how your heart feels today.",
     startJourney: "Start Your Journey",
     howFeeling: "How are you feeling today?",
@@ -48,7 +48,7 @@ const translations = {
     resilientSpirit: "Resilient Spirit",
   },
   ar: {
-    welcome: "مرحباً. أنا أمل.",
+    welcome: "مرحباً. أنا سفينة.",
     welcomeSub: "لا حاجة للاسم. فقط أخبرني كيف يشعر قلبك اليوم.",
     startJourney: "ابدأ رحلتك",
     howFeeling: "كيف تشعر اليوم؟",
