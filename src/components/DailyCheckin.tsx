@@ -11,11 +11,11 @@ const DailyCheckin = () => {
   const [selectedEmoji, setSelectedEmoji] = useState<string | null>(null);
 
   const emojis = [
-    { icon: Heart, label: "Grateful", color: "text-pink-500" },
-    { icon: Smile, label: "Happy", color: "text-yellow-500" },
-    { icon: Meh, label: "Okay", color: "text-blue-500" },
-    { icon: Frown, label: "Struggling", color: "text-purple-500" },
-    { icon: CloudRain, label: "Heavy", color: "text-gray-500" },
+    { icon: Heart, key: "grateful", color: "text-pink-500" },
+    { icon: Smile, key: "happy", color: "text-yellow-500" },
+    { icon: Meh, key: "okay", color: "text-blue-500" },
+    { icon: Frown, key: "struggling", color: "text-purple-500" },
+    { icon: CloudRain, key: "heavy", color: "text-gray-500" },
   ];
 
   const handleRecord = () => {
@@ -31,10 +31,10 @@ const DailyCheckin = () => {
     }
   };
 
-  const handleEmojiSelect = (label: string) => {
-    setSelectedEmoji(label);
+  const handleEmojiSelect = (key: string) => {
+    setSelectedEmoji(key);
     toast.success("Feeling noted", {
-      description: `You're feeling ${label.toLowerCase()} today.`,
+      description: `You're feeling ${t(key)} today.`,
     });
   };
 
@@ -76,16 +76,16 @@ const DailyCheckin = () => {
         <div className="grid grid-cols-5 gap-3">
           {emojis.map((emoji) => (
             <button
-              key={emoji.label}
-              onClick={() => handleEmojiSelect(emoji.label)}
+              key={emoji.key}
+              onClick={() => handleEmojiSelect(emoji.key)}
               className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-smooth hover:scale-105 ${
-                selectedEmoji === emoji.label
+                selectedEmoji === emoji.key
                   ? 'border-primary bg-primary/5 shadow-soft'
                   : 'border-border bg-card hover:border-primary/50'
               }`}
             >
               <emoji.icon className={`w-8 h-8 ${emoji.color}`} />
-              <span className="text-xs font-medium">{emoji.label}</span>
+              <span className="text-xs font-medium">{t(emoji.key)}</span>
             </button>
           ))}
         </div>

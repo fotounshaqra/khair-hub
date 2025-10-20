@@ -46,6 +46,11 @@ const translations = {
     feedbackSeeker: "Feedback Seeker",
     persistentDreamer: "Persistent Dreamer",
     resilientSpirit: "Resilient Spirit",
+    grateful: "Grateful",
+    happy: "Happy",
+    okay: "Okay",
+    struggling: "Struggling",
+    heavy: "Heavy",
   },
   ar: {
     welcome: "مرحباً. أنا سفينه.",
@@ -84,6 +89,11 @@ const translations = {
     feedbackSeeker: "باحث عن الملاحظات",
     persistentDreamer: "حالم مثابر",
     resilientSpirit: "روح مرنة",
+    grateful: "ممتن",
+    happy: "سعيد",
+    okay: "بخير",
+    struggling: "أكافح",
+    heavy: "ثقيل",
   }
 };
 
