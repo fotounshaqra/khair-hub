@@ -7,13 +7,12 @@ import BlossomMap from "./BlossomMap";
 import ResiliencePathway from "./ResiliencePathway";
 import StoriesHub from "./StoriesHub";
 import { Heart, Flower2, BookOpen, Compass, TrendingUp } from "lucide-react";
-
 const Dashboard = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [activeTab, setActiveTab] = useState("checkin");
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border shadow-soft">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -21,7 +20,7 @@ const Dashboard = () => {
             <div className="w-10 h-10 rounded-full gradient-warm flex items-center justify-center">
               <Flower2 className="w-5 h-5 text-white" />
             </div>
-            <h1 className="text-xl font-bold text-foreground">Amal</h1>
+            <h1 className="text-xl font-bold text-foreground">سفينة</h1>
           </div>
           <LanguageToggle />
         </div>
@@ -31,38 +30,23 @@ const Dashboard = () => {
       <main className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="grid w-full grid-cols-5 h-auto p-1 bg-muted/50">
-            <TabsTrigger 
-              value="checkin" 
-              className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
-            >
+            <TabsTrigger value="checkin" className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft">
               <Heart className="w-5 h-5" />
               <span className="text-xs">{t('dailyCheckin')}</span>
             </TabsTrigger>
-            <TabsTrigger 
-              value="journey"
-              className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
-            >
+            <TabsTrigger value="journey" className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft">
               <Flower2 className="w-5 h-5" />
               <span className="text-xs">{t('yourJourney')}</span>
             </TabsTrigger>
-            <TabsTrigger 
-              value="resilience"
-              className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
-            >
+            <TabsTrigger value="resilience" className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft">
               <TrendingUp className="w-5 h-5" />
               <span className="text-xs">{t('resiliencePathway')}</span>
             </TabsTrigger>
-            <TabsTrigger 
-              value="stories"
-              className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
-            >
+            <TabsTrigger value="stories" className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft">
               <BookOpen className="w-5 h-5" />
               <span className="text-xs">{t('stories')}</span>
             </TabsTrigger>
-            <TabsTrigger 
-              value="resources"
-              className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft"
-            >
+            <TabsTrigger value="resources" className="flex flex-col gap-2 py-3 data-[state=active]:bg-card data-[state=active]:shadow-soft">
               <Compass className="w-5 h-5" />
               <span className="text-xs">{t('resources')}</span>
             </TabsTrigger>
@@ -95,8 +79,6 @@ const Dashboard = () => {
           </TabsContent>
         </Tabs>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Dashboard;
