@@ -48,7 +48,7 @@ const translations = {
     resilientSpirit: "Resilient Spirit",
   },
   ar: {
-    welcome: "مرحباً. أنا سفينة.",
+    welcome: "مرحباً. أنا سفينه.",
     welcomeSub: "لا حاجة للاسم. فقط أخبرني كيف يشعر قلبك اليوم.",
     startJourney: "ابدأ رحلتك",
     howFeeling: "كيف تشعر اليوم؟",
