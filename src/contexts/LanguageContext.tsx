@@ -84,7 +84,7 @@ const translations = {
     resiliencePathway: "طريق القوة",
     stories: "قصص",
     resources: "موارد",
-    speakHeart: "احكي من قلبك...",
+    speakHeart: "ارمس من قلبك...",
     emojiFeeling: "أو اختار رمز تعبيري",
     blossomMap: "زهرتك",
     resilience: "القوة",
