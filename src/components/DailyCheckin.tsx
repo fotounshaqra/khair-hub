@@ -21,20 +21,20 @@ const DailyCheckin = () => {
   const handleRecord = () => {
     setIsRecording(!isRecording);
     if (!isRecording) {
-      toast.success("Listening to your heart...", {
-        description: "Speak naturally. Take your time.",
+      toast.success(t('listeningHeart'), {
+        description: t('speakNaturally'),
       });
     } else {
-      toast.success("Thank you for sharing", {
-        description: "Your feelings matter.",
+      toast.success(t('thankSharing'), {
+        description: t('feelingsMatter'),
       });
     }
   };
 
   const handleEmojiSelect = (key: string) => {
     setSelectedEmoji(key);
-    toast.success("Feeling noted", {
-      description: `You're feeling ${t(key)} today.`,
+    toast.success(t('feelingNoted'), {
+      description: `${t('youreFeeling')} ${t(key)} ${t('today')}.`,
     });
   };
 
@@ -65,7 +65,7 @@ const DailyCheckin = () => {
         </Button>
         {isRecording && (
           <p className="text-sm text-muted-foreground animate-pulse">
-            Recording... Tap to stop
+            {t('recordingTapStop')}
           </p>
         )}
       </Card>

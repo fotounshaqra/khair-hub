@@ -9,25 +9,25 @@ const StoriesHub = () => {
   const stories = [
     {
       id: 1,
-      title: "From 10 Rejections to a Role at ADNOC",
-      duration: "2 min",
-      theme: "Hope",
+      titleKey: "storyTitle1",
+      durationKey: "duration2min",
+      themeKey: "themeHope",
       color: "gradient-hope",
       icon: Sparkles,
     },
     {
       id: 2,
-      title: "Balancing Family & Dreams in AI",
-      duration: "1.5 min",
-      theme: "Courage",
+      titleKey: "storyTitle2",
+      durationKey: "duration1min",
+      themeKey: "themeCourage",
       color: "gradient-warm",
       icon: Heart,
     },
     {
       id: 3,
-      title: "Finding My Voice After Anxiety",
-      duration: "2 min",
-      theme: "Growth",
+      titleKey: "storyTitle3",
+      durationKey: "duration2min",
+      themeKey: "themeGrowth",
       color: "gradient-calm",
       icon: Play,
     },
@@ -55,12 +55,12 @@ const StoriesHub = () => {
               {/* Content */}
               <div className="flex-1 space-y-2">
                 <h3 className="font-semibold text-foreground leading-tight">
-                  {story.title}
+                  {t(story.titleKey)}
                 </h3>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <span>{story.duration}</span>
+                  <span>{t(story.durationKey)}</span>
                   <span>•</span>
-                  <span>{story.theme}</span>
+                  <span>{t(story.themeKey)}</span>
                 </div>
               </div>
 
@@ -78,7 +78,7 @@ const StoriesHub = () => {
       </div>
 
       <Button variant="outline" className="w-full">
-        Share Your Story (Anonymous)
+        {t('shareStory')}
       </Button>
     </div>
   );
