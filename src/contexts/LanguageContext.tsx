@@ -78,7 +78,7 @@ const translations = {
     welcome: "مرحبا. أنا سفينه.",
     welcomeSub: "ما تحتاج اسم. بس قولي شلون حاس قلبك اليوم.",
     startJourney: "ابدا رحلتك",
-    howFeeling: "شلون حاسك اليوم؟",
+    howFeeling: "شو احساسك اليوم؟",
     dailyCheckin: "تسجيل يومي",
     yourJourney: "رحلتك",
     resiliencePathway: "طريق القوة",
