@@ -75,7 +75,7 @@ const translations = {
     recordingTapStop: "Recording... Tap to stop",
   },
   ar: {
-    welcome: "مرحبا. أنا سفينه.",
+    welcome: "هلا أنا سفينه",
     welcomeSub: "ما تحتاج اسم. بس قولي شلون حاس قلبك اليوم.",
     startJourney: "ابدا رحلتك",
     howFeeling: "شو احساسك اليوم؟",
